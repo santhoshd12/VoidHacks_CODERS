@@ -3,18 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3
 
     <!-- Optional theme -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uw
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3
 
 <!-- Optional theme -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW
 
 <!-- Latest compiled and minified JavaScript -->
-<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="an
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfo
 
     <title>Login Page</title>
     <style>
@@ -67,7 +67,8 @@
         }
         body{
             background: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5),rgba(255,255,255,0.5)),
-            url("D:/VH/FP/main_img.jpg");
+            url("https://vijaysmvec.github.io/ffff/main_img.jpg");
+            background-position: relative;
         }
         .cta-button {
       display: inline-block;
@@ -81,32 +82,40 @@
 </head>
 <body>
     <form id="loginForm">
-        <label for="username">Username:</label>
-        <input type="text" id="username" name="username" required>
+        <label for="usernumber">ContactNumber:</label>
+        <input type="number" id="usernumber" name="usernumber" placeholder="ContactNumber" required>
         <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required>
+        <input type="password" id="password" name="password" placeholder="password" required>
         <label for="phone">Voter id:</label>
-        <input type="text" id="phone" name="phone" placeholder="Contact Number" required>
-        <button type="button" onclick="validateLogin()">Login</button>
+        <input type="text" id="phone" name="phone" placeholder="Enter Value" required>
+        <button type="button" onclick="validateLogin();storeData()">Login</button>
         <span style="display: inline-block;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-        <a href="login_pg.html" class="cta-button">Go Back</a>
+        <a href="D:\Downloads\login_pg.html" class="cta-button">Go Back</a>
 
     </form>
     <br><br><br>
+    
+    <!-- <button onclick="storeData()">Store Data</button> -->
+
 
     <script>
         function validateLogin() {
-            var username = document.getElementById('username').value;
+            var usernumber = document.getElementById('usernumber').value;
             var password = document.getElementById('password').value;
             var phone = document.getElementById('phone').value;
             var phoneRegex = /^\+\d{1,3}\d{1,14}$/;
 
-            if (1){//username && password && phoneRegex.test(phone)) {
+            if (usernumber && password && phoneRegx.test(phone)){
                 alert('Login successful!');
                 window.location.href="chk_age.html";
             } else {
-                alert('Please enter both username and password.');
+                alert('Please enter both usernumber and password.');
             }
+        }
+        function storeData() {
+            var inputValue = document.getElementById('dataInput').value;
+            localStorage.setItem('storedValue', inputValue);
+            alert('Value stored successfully!');
         }
     </script>
 </body>
