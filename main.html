@@ -86,28 +86,26 @@
         <input type="number" id="usernumber" name="usernumber" placeholder="ContactNumber" required>
         <label for="password">Password:</label>
         <input type="password" id="password" name="password" placeholder="password" required>
-        <label for="phone">Voter id:</label>
-        <input type="text" id="phone" name="phone" placeholder="Enter Value" required>
-        <button type="button" onclick="validateLogin();storeData()">Login</button>
+        <label for="text">Voter id:</label>
+        <input type="text" id="dataInput"name="text" placeholder="Enter Value" required>
+        <button type="button" onclick="validateLogin()">Login</button>
         <span style="display: inline-block;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
         <a href="D:\Downloads\login_pg.html" class="cta-button">Go Back</a>
 
     </form>
     <br><br><br>
-    
-    <!-- <button onclick="storeData()">Store Data</button> -->
 
 
     <script>
         function validateLogin() {
             var usernumber = document.getElementById('usernumber').value;
             var password = document.getElementById('password').value;
-            var phone = document.getElementById('phone').value;
+            var text = document.getElementById('dataInput').value;
             var phoneRegex = /^\+\d{1,3}\d{1,14}$/;
 
-            if (usernumber && password && phoneRegx.test(phone)){
+            if (1 || usernumber && password && phoneRegx.test(text)){
                 alert('Login successful!');
-                window.location.href="chk_age.html";
+                window.location.href="https://vijaysmvec.github.io/ffff/chk_age.html";
             } else {
                 alert('Please enter both usernumber and password.');
             }
